@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
+
+	<db_driver>com.mysql.jdbc.Driver</db_driver>
+	<db_url>jdbc:mysql://localhost:3306/db_eddb_clone?useSSL=false</db_url>
+	<db_username>root</db_username>
+	<db_password>root</db_password>
+
 </settings>

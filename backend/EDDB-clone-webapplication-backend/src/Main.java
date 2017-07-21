@@ -1,14 +1,22 @@
 import model.Settings;
+import model.StarSystem;
+import tools.DbConnectionManager;
 import tools.XmlHandler;
 
+/**
+ * Program entry point
+ * @author Gilles
+ *
+ */
 public class Main {
 	
 	private final static String SETTINGS_FILENAME = "settings.xml";
+	private final static Settings settings = XmlHandler.readXmlFile(SETTINGS_FILENAME, Settings.class);
 
 	public static void main(String[] args) {
-		Settings s = XmlHandler.readXmlFile(SETTINGS_FILENAME, Settings.class);
+		DbConnectionManager db = new DbConnectionManager(settings);
 		
-		System.out.println(s.getVersion());
+		System.out.println(new StarSystem());
 	}
 
 }
