@@ -15,8 +15,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		DbConnectionManager db = new DbConnectionManager(settings);
+
+		for (int i = 0; i < 100; i++) {
+			db.insertStarSystem(new StarSystem());
+		}
 		
-		System.out.println(new StarSystem());
+		db.deleteAllFromTable("tbl_starsystems");
+		
+		
 	}
 
 }
